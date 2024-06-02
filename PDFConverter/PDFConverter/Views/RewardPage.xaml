@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PdfConverter.Views.RewardPage"
+             Title="RewardPage">
+
+    <StackLayout Margin="30">
+        <!-- Header -->
+        <StackLayout Orientation="Vertical" Margin="0,50,0,20">
+                <Label Text="You have"
+                       FontSize="Medium"
+                       Margin="10,0,0,0"
+                       FontAttributes="Bold"
+                       TextColor="#333333"/>
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Text="{Binding RewardPoints}"
+                       FontSize="36"
+                       Margin="10,0,0,0"
+                       FontAttributes="Bold"
+                       TextColor="#333333"/>
+                <Label Text="Rewards Points"
+                       FontSize="Medium"
+                       Margin="10,15,0,0"
+                       FontAttributes="Bold"
+                       TextColor="#333333"/>
+            </StackLayout>
+        </StackLayout>
+        
+        <Frame BorderColor="Black"
+               BackgroundColor="White"
+               Padding="10"
+               CornerRadius="5"
+               Grid.Row="1"
+               Grid.Column="0">
+            <StackLayout Orientation="Horizontal">
+                <Label  Text="{Binding RewardPoints}" FontAttributes="Bold" FontSize="Medium" />
+                <Label Text=" points will expire on 30 Jun 2023" FontAttributes="Bold" FontSize="Medium" />
+
+            </StackLayout>
+        </Frame>
+
+        <!-- Utility buttons -->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Margin="0,0,0,15"
+                         BackgroundColor="#FFFFFF"
+                         Padding="20, 15, 20, 15">
+                <Image  Source="https://cdn4.iconfinder.com/data/icons/file-types-outline-1/64/doc_txt_docx_odt_rtf_word_files-512.png"
+                       HeightRequest="60"
+                       Margin="0,0,20,0"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="PDF Edit"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           TextColor="#333333"/>
+                    <Label Text="(10 points)"
+                           FontSize="Medium"
+                           TextColor="#666666"/>
+                </StackLayout>
+                <Button Text="Activate"
+                        WidthRequest="120"
+                        Clicked="Edit_Clicked"
+                         x:Name="Edit"
+                        FontSize="Large"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#007AFF"
+                        Margin="35,0,0,0"
+                        CornerRadius="8"
+                        Padding="10, 5, 10, 5"
+                        Command="{Binding EditCommand}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="0,0,0,15"
+                         BackgroundColor="#FFFFFF"
+                         Padding="20, 15, 20, 15">
+                <Image  Source="https://cdn4.iconfinder.com/data/icons/file-types-outline-1/64/sharing_document_cloud_backup_internet_files-512.png"
+                       HeightRequest="60"
+                       Margin="0,0,20,0"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Split"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           TextColor="#333333"/>
+                    <Label Text="(5 points)"
+                           FontSize="Medium"
+                           TextColor="#666666"/>
+                </StackLayout>
+                <Button Text="Activate"
+                        WidthRequest="120"
+                        Clicked="Split_Clicked"
+                        x:Name="Split"
+                        FontSize="Large"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#007AFF"
+                        Margin="45,0,0,0"
+                        CornerRadius="8"
+                        Padding="10, 5, 10, 5"
+                        Command="{Binding SplitCommand}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="0,0,0,15"
+                         BackgroundColor="#FFFFFF"
+                         Padding="20, 15, 20, 15">
+                <Image Source="https://cdn4.iconfinder.com/data/icons/file-types-outline-1/64/zip_rar_7z_compress_files-512.png"
+                       HeightRequest="60"
+                       Margin="0,0,20,0"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Compress"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           TextColor="#333333"/>
+                    <Label Text="(15 points)"
+                           FontSize="Medium"
+                           TextColor="#666666"/>
+                </StackLayout>
+                <Button Text="Activate"
+                        WidthRequest="120"
+                        Clicked="Compress_Clicked"
+                        x:Name="Compress"
+                        FontSize="Large"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#007AFF"
+                        Margin="20,0,0,0"
+                        CornerRadius="8"
+                        Padding="10, 5, 10, 5"
+                        Command="{Binding CompressCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

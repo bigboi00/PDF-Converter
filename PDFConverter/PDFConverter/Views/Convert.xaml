@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui"
+             x:Class="PdfConverter.Views.Convert"
+             Title="Convert">
+    <StackLayout Background="White">
+        <StackLayout>
+            <Label x:Name="LblText" Text="PDF Converter" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+        </StackLayout>
+        <Grid Margin="0,5,0,0">
+            <Path Data="M0 30C0 13.4315 13.4315 0 30 0H284C300.569 0 314 13.4315 314 30V280C314 296.569 300.569 310 284 310H30C13.4315 310 0 296.569 0 280V30Z" Fill="#ff5656" WidthRequest="320" />
+            <Path Data="M30 233.5C29.2459 233.5 28.4989 233.471 27.7601 233.413L27.6439 234.909C26.0559 234.785 24.5026 234.538 22.9936 234.177L23.3426 232.719C21.8782 232.368 20.4578 231.905 19.091 231.338L18.5164 232.724C17.057 232.118 15.6557 231.401 14.3232 230.583L15.1082 229.305C13.8328 228.522 12.6236 227.641 11.491 226.673L10.5163 227.813C9.32181 226.792 8.20845 225.678 7.18727 224.484L8.32743 223.509C7.35922 222.376 6.47834 221.167 5.69516 219.892L4.41693 220.677C3.59868 219.344 2.88161 217.943 2.27641 216.484L3.662 215.909C3.0952 214.542 2.63176 213.122 2.2814 211.657L0.822566 212.006C0.461533 210.497 0.214525 208.944 0.0911588 207.356L1.58665 207.24C1.52926 206.501 1.5 205.754 1.5 205V202.569H0V197.708H1.5V192.847H0V187.986H1.5V183.125H0V178.264H1.5V173.403H0V168.542H1.5V163.681H0V158.819H1.5V153.958H0V149.097H1.5V144.236H0V139.375H1.5V134.514H0V129.653H1.5V124.792H0V119.931H1.5V115.069H0V110.208H1.5V105.347H0V100.486H1.5V95.625H0V90.7639H1.5V85.9027H0V81.0416H1.5V76.1805H0V71.3194H1.5V66.4583H0V61.5972H1.5V56.736H0V51.8749H1.5V47.0138H0V42.1527H1.5V37.2916H0V32.4305H1.5V30C1.5 29.2459 1.52926 28.4989 1.58665 27.7601L0.0911591 27.6439C0.214526 26.0559 0.461534 24.5026 0.822568 22.9936L2.2814 23.3426C2.63176 21.8782 3.0952 20.4578 3.662 19.0909L2.27642 18.5164C2.88161 17.057 3.59868 15.6557 4.41693 14.3232L5.69516 15.1082C6.47834 13.8328 7.35922 12.6236 8.32742 11.491L7.18727 10.5163C8.20845 9.32181 9.32181 8.20844 10.5163 7.18726L11.491 8.32742C12.6236 7.35921 13.8328 6.47834 15.1082 5.69515L14.3232 4.41693C15.6557 3.59868 17.057 2.8816 18.5164 2.27641L19.0909 3.662C20.4578 3.0952 21.8782 2.63176 23.3426 2.2814L22.9936 0.822568C24.5026 0.461535 26.0559 0.214526 27.6439 0.0911594L27.7601 1.58665C28.4989 1.52926 29.2459 1.5 30 1.5H32.5263V0H37.5789V1.5H42.6316V0H47.6842V1.5H52.7368V0H57.7895V1.5H62.8421V0H67.8947V1.5H72.9474V0H78V1.5H83.0526V0H88.1053V1.5H93.1579V0H98.2105V1.5H103.263V0H108.316V1.5H113.368V0H118.421V1.5H123.474V0H128.526V1.5H133.579V0H138.632V1.5H143.684V0H148.737V1.5H153.789V0H158.842V1.5H163.895V0H168.947V1.5H174V0H179.053V1.5H184.105V0H189.158V1.5H194.21V0H199.263V1.5H204.316V0H209.368V1.5H214.421V0H219.474V1.5H222C222.754 1.5 223.501 1.52926 224.24 1.58665L224.356 0.0911599C225.944 0.214527 227.497 0.461536 229.006 0.822569L228.657 2.2814C230.122 2.63176 231.542 3.0952 232.909 3.66201L233.484 2.27642C234.943 2.88161 236.344 3.59868 237.677 4.41693L236.892 5.69516C238.167 6.47834 239.376 7.35922 240.509 8.32742L241.484 7.18727C242.678 8.20845 243.792 9.32181 244.813 10.5163L243.673 11.491C244.641 12.6236 245.522 13.8328 246.305 15.1082L247.583 14.3232C248.401 15.6557 249.118 17.057 249.724 18.5164L248.338 19.0909C248.905 20.4578 249.368 21.8782 249.719 23.3426L251.177 22.9936C251.538 24.5026 251.785 26.0559 251.909 27.6439L250.413 27.7601C250.471 28.4989 250.5 29.2459 250.5 30V32.4306H252V37.2917H250.5V42.1528H252V47.0139H250.5V51.875H252V56.7361H250.5V61.5972H252V66.4583H250.5V71.3194H252V76.1805H250.5V81.0417H252V85.9028H250.5V90.7639H252V95.625H250.5V100.486H252V105.347H250.5V110.208H252V115.069H250.5V119.931H252V124.792H250.5V129.653H252V134.514H250.5V139.375H252V144.236H250.5V149.097H252V153.958H250.5V158.819H252V163.681H250.5V168.542H252V173.403H250.5V178.264H252V183.125H250.5V187.986H252V192.847H250.5V197.708H252V202.57H250.5V205C250.5 205.754 250.471 206.501 250.413 207.24L251.909 207.356C251.785 208.944 251.538 210.497 251.177 212.006L249.719 211.657C249.368 213.122 248.905 214.542 248.338 215.909L249.724 216.484C249.118 217.943 248.401 219.344 247.583 220.677L246.305 219.892C245.522 221.167 244.641 222.376 243.673 223.509L244.813 224.484C243.792 225.678 242.678 226.792 241.484 227.813L240.509 226.673C239.376 227.641 238.167 228.522 236.892 229.305L237.677 230.583C236.344 231.401 234.943 232.118 233.484 232.724L232.909 231.338C231.542 231.905 230.122 232.368 228.657 232.719L229.006 234.177C227.497 234.538 225.944 234.785 224.356 234.909L224.24 233.413C223.501 233.471 222.754 233.5 222 233.5H219.474V235H214.421V233.5H209.368V235H204.316V233.5H199.263V235H194.211V233.5H189.158V235H184.105V233.5H179.053V235H174V233.5H168.947V235H163.895V233.5H158.842V235H153.789V233.5H148.737V235H143.684V233.5H138.632V235H133.579V233.5H128.526V235H123.474V233.5H118.421V235H113.368V233.5H108.316V235H103.263V233.5H98.2106V235H93.1579V233.5H88.1053V235H83.0527V233.5H78V235H72.9474V233.5H67.8948V235H62.8422V233.5H57.7895V235H52.7369V233.5H47.6843V235H42.6317V233.5H37.579V235H32.5264V233.5H30Z" Fill="white" StrokeThickness="10" StrokeDashArray="5" WidthRequest="260" HeightRequest="260"/>
+            <Image x:Name="SelectImg" Source="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-alt-512.png" HeightRequest="60" Margin="0,0,0,120"/>
+            <Button Clicked="RequestWriting" x:Name="SelectBtn" Text="Choose File" FontSize="20"  HorizontalOptions="Center" Padding="0" HeightRequest="40" WidthRequest="200" BackgroundColor="#E8E8E8" TextColor="Black" />
+            <zxing:BarcodeGeneratorView x:Name="QrCode"  Format="QrCode" Value="" ForegroundColor="Black" WidthRequest="200" HeightRequest="100"/>
+            <Label x:Name="QrCodeLbl"  Text="QR Code" FontSize="32" TextColor="#ff5656" HorizontalTextAlignment="Center" Margin="0,50,0,0" FontAttributes="Bold" IsVisible="false"/>
+            <StackLayout x:Name="SplitIndex" IsVisible="false">
+                <Grid Margin="0,40,110,0">
+                    <Rectangle WidthRequest="90" HeightRequest="60"   Stroke="Black" StrokeThickness="1" Margin="0,0,0,50"/>
+                    <Label Text="From Page:" FontSize="16" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Entry x:Name="startPage" Placeholder="1" WidthRequest="30" FontSize="20" Margin="0,15,0,50" />
+                    <Rectangle WidthRequest="90" HeightRequest="60"  Stroke="Black" StrokeThickness="1" Margin="230,0,0,50"/>
+                    <Label Text="To:" FontSize="16" HorizontalTextAlignment="Center" Margin="220,0,0,0"/>
+                    <Entry x:Name="endPage" Placeholder="3" WidthRequest="30" FontSize="20" Margin="235,15,0,50" />
+
+                </Grid>
+            </StackLayout>
+            <StackLayout x:Name="EditColumn"  IsVisible="false">
+                <Grid Margin="0,40,110,0">
+                    <Rectangle WidthRequest="200" HeightRequest="60"   Stroke="Black" StrokeThickness="1" Margin="100,0,0,50"/>
+                    <Label Text="Add Text:" FontSize="16" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Entry x:Name="EditText" Placeholder="Text" WidthRequest="180" FontSize="20" Margin="100,15,0,50" />
+                </Grid>
+            </StackLayout>
+            <Label Text="Max upload size N MB" x:Name="SelectLbl" TextColor="DarkGray" HorizontalTextAlignment="Center" FontSize="20" Margin="10,180,0,0"/>
+            <Label IsVisible="False" x:Name="ConvertLbl" TextColor="DarkSlateBlue" HorizontalTextAlignment="Start" FontSize="20" Margin="100,100,0,0"/>
+            <Button  IsVisible="False" Command="{Binding Convert}" Clicked="Converting" x:Name="ConvertBtn" Text="Convert"  FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding Edit}" Clicked="Editting" x:Name="EdittingBtn" Text="Edit"  FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding Compress}" Clicked="Compressing" x:Name="CompressingBtn" Text="Compress"  FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding Split}" Clicked="Splitting" x:Name="SplittingBtn" Text="Split"  FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding Open}" Clicked="Open" x:Name="OpenBtn" Text="Open File" FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding OpenEdit}" Clicked="OpenEdit" x:Name="OpenEditBtn" Text="Open File" FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding OpenCom}" Clicked="OpenCom" x:Name="OpenComBtn" Text="Open File" FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <Button  IsVisible="False" Command="{Binding OpenSplit}" Clicked="OpenSplit" x:Name="OpenSplitBtn" Text="Open File" FontAttributes="Bold" HorizontalOptions="Center" Padding="0" HeightRequest="50" CornerRadius="100" WidthRequest="160" BackgroundColor="#fd5f64" FontSize="24" TextColor="#E8E8E8" Margin="0,60,50,0" />
+            <ProgressBar ScaleY="4" IsVisible="False" x:Name="ConvertProgressBar" ProgressColor="#ff5656" WidthRequest="200" Margin="0,0,0,30" Progress="0"/>
+            <ImageButton Clicked="Reset" x:Name="ResetBtn" IsVisible="False" BackgroundColor="Transparent" Scale="1.2" HeightRequest="100" WidthRequest="40" Margin="180,60,0,0" Source="https://cdn1.iconfinder.com/data/icons/systemui-vol-2/21/reset-512.png" />
+        </Grid>
+        <HorizontalStackLayout>
+            <ImageButton  Clicked="EditPDF" x:Name="EditBtn" BackgroundColor="Transparent" BorderColor="Transparent" Scale="1" HeightRequest="75"  WidthRequest="85" CornerRadius="30" Padding="0" Margin="40,0,0,0" Source="https://cdn4.iconfinder.com/data/icons/file-types-outline-1/64/doc_txt_docx_odt_rtf_word_files-512.png" />
+            <ImageButton  Clicked="Split"  x:Name="SplitBtn"   Scale="2" HeightRequest="100"  BackgroundColor="Transparent" BorderColor="Transparent" WidthRequest="35" CornerRadius="30" Padding="0" Margin="55,0,0,0" Source="https://cdn4.iconfinder.com/data/icons/file-types-outline-1/64/sharing_document_cloud_backup_internet_files-512.png" />
+            <ImageButton  Clicked="CompressFile" x:Name="CompressBtn"  BackgroundColor="Transparent" Scale="2" HeightRequest="80" WidthRequest="35" Margin="80,0,0,0" Source="https://cdn4.iconfinder.com/data/icons/file-types-outline-1/64/zip_rar_7z_compress_files-512.png" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label FontAttributes="Bold" Margin="70,0,0,0" FontSize="20" Text="Edit"/>
+            <Label FontAttributes="Bold" Margin="60,0,0,0" FontSize="20" Text="Split"/>
+            <Label FontAttributes="Bold" Margin="40,0,0,0" FontSize="20" Text="Compress"/>
+        </HorizontalStackLayout>
+
+        <Grid>
+            <Button Clicked="GenerateQR" BackgroundColor="Gray" WidthRequest="230" HeightRequest="60" HorizontalOptions="Center" Margin="0,0,0,0" />
+            <Label  Text="Generate QR Code" TextColor="White" FontSize="19"  Margin="135,45,0,0" />
+            <Image BackgroundColor="Transparent" Scale="1.2" HeightRequest="100" WidthRequest="40" Margin="0,0,180,20" Source="https://cdn4.iconfinder.com/data/icons/twitter-29/512/154_Play_Video_Twitter-512.png" />
+        </Grid>
+
+
+    </StackLayout>
+</ContentPage>

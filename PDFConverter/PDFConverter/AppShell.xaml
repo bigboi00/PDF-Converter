@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PdfConverter.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PdfConverter"
+    xmlns:controls="clr-namespace:PdfConverter.Controls"
+    xmlns:views="clr-namespace:PdfConverter.Views"
+    xmlns:viewmodelss="clr-namespace:PdfConverter.ViewModels"
+    xmlns:models="clr-namespace:PdfConverter.Models"
+    Shell.TabBarIsVisible="False"
+    BackgroundColor="#ff5656">
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader></controls:FlyoutHeader>
+    </Shell.FlyoutHeader>
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        Route="MainPage" />
+
+    <FlyoutItem Route="HomePage" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Icon="{x:Static models:Icon.Convert}" Title="Convert" ContentTemplate="{DataTemplate views:Convert}"  Route="Convert" />
+        <ShellContent Icon="{x:Static models:Icon.Point}"  Title="Reward" ContentTemplate="{DataTemplate views:RewardPage}" Route="RewardPage" />
+    </FlyoutItem>
+
+    
+    <Shell.FlyoutFooter>
+        <StackLayout>
+            <Button Text="Sign Out" Command="{Binding SignOutCommand}"  BackgroundColor="#ff5656" WidthRequest="300" Margin="0, 0, 0,10" FontSize="20"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+</Shell>

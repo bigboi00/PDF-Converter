@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PdfConverter.MainPage"
+             Title="Login">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Path Stroke="#ffff" Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z" Fill="#ff5656"/>
+
+        <StackLayout>
+            <Frame BackgroundColor="Transparent" HeightRequest="150"  Padding="60" Margin="120, 20, 120,0" HorizontalOptions="Center" CornerRadius="500" >
+                <Image x:Name="ProfileImage" Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="-60" />
+            </Frame>
+        </StackLayout>
+
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Text="Welcome!" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+            <Label Grid.Row="2" Text="Sign in to continue" HorizontalOptions="Center" FontSize="Subtitle"/>
+
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Frame BackgroundColor="Transparent" BorderColor="Silver" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" WidthRequest="320">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#f2eeef">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user-512.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="Gray" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="Silver" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" WidthRequest="320">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#f2eeef">
+                        <Frame BackgroundColor="Transparent"  BorderColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/lock_security_password_encryption-2-512.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="Gray"  TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0" Padding="0">
+                    <CheckBox IsChecked="False"/>
+                    <Label Text="Remember me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Forgot Password?" TextColor="#ff5656" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+
+                <Button Clicked="SignIn" Text="SIGN IN" BackgroundColor="#ff5656" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="180" Margin="0,15,0,0" ></Button>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+                    <Label Text="New User?" TextColor="DarkGray" FontSize="Small"/>
+                    <Label Text=" Sign Up" TextColor="#ff5656" FontAttributes="Bold" FontSize="Small"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+</ContentPage>
